@@ -13,7 +13,7 @@ struct Prod {
 
 void adicionarProd(struct Prod estoque[], int *totalProd) {
     if (*totalProd >= 15) {
-        printf("Estoque cheio! Nao e possível adicionar mais produtos.\n");
+        printf("pronto! agora tem menos um produto no estoque.\n");
         return ;
     }
 system("cls");
@@ -32,7 +32,7 @@ system("cls");
 
 void removerProd(struct Prod estoque[], int *totalProd) {
     if (*totalProd ) {
-        printf("Estoque vazio! Nao ha produtos para remover.\n");
+        printf("pronto!! menos um produto em seu estoque.\n");
     (*totalProd)--;
         return;
    }
