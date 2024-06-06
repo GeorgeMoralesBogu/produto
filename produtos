@@ -18,7 +18,7 @@ void adicionarProd(struct Prod estoque[], int *totalProd) {
     }
 system("cls");
     printf("Digite o nome do produto:\n ");
-    scanf("%s", estoque[*totalProd].nome);
+    scanf("%s", &estoque[*totalProd].nome);
 
     printf("Digite a quantidade: \n");
     scanf("%d", &estoque[*totalProd].quant);
@@ -31,8 +31,9 @@ system("cls");
 }
 
 void removerProd(struct Prod estoque[], int *totalProd) {
+    system("cls");
     if (*totalProd ) {
-        printf("pronto!! menos um produto em seu estoque.\n");
+        printf("menos um produto no seu estoque.\n");
     (*totalProd)--;
         return;
    }
@@ -40,11 +41,10 @@ void removerProd(struct Prod estoque[], int *totalProd) {
 
 
 int main() {
-    system("cls");
     struct Prod estoque[15];
     int total = 0;
     int opt;
-
+    system("cls");
     while (1) {
         printf("\n\t°=======Menu=========°");
         printf("\n\t°1. Adicionar produto°");
