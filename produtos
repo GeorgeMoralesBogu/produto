@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+void adicionarProd();
+void removerProd();
+
+struct Prod {
+    char nome[50];
+    int quant;
+    float preco;
+};
+
+void adicionarProd(struct Prod estoque[], int *totalProd) {
+    if (*totalProd >= 15) {
+        printf("Estoque cheio! Nao e possível adicionar mais produtos.\n");
+        return ;
+    }
+system("cls");
+    printf("Digite o nome do produto:\n ");
+    scanf("%s", estoque[*totalProd].nome);
+
+    printf("Digite a quantidade: \n");
+    scanf("%d", &estoque[*totalProd].quant);
+
+    printf("Digite o preco: \n");
+    scanf("%f", &estoque[*totalProd].preco);
+
+    (*totalProd)++;
+    system("cls");
+}
+
+
+void removerProd(struct Prod estoque[], int *totalProd) {
+    if (*totalProd == 0) {
+        printf("Estoque vazio! Não ha produtos para remover.\n");
+        return;
+   };
+}
