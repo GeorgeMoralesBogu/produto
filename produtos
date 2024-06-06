@@ -30,13 +30,14 @@ system("cls");
     system("cls");
 }
 
-
 void removerProd(struct Prod estoque[], int *totalProd) {
-    if (*totalProd == 0) {
-        printf("Estoque vazio! Não ha produtos para remover.\n");
+    if (*totalProd ) {
+        printf("Estoque vazio! Nao ha produtos para remover.\n");
+    (*totalProd)--;
         return;
-   };
+   }
 }
+
 
 int main() {
     system("cls");
@@ -67,9 +68,10 @@ int main() {
         exit(0);
 
     default:
-        printf("Opção invalida! Tente novamente.\n");
+        printf("Opcao invalida! Tente novamente.\n");
      system("cls");
      }
    }
   return 0;
 }
+
