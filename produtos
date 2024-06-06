@@ -37,3 +37,39 @@ void removerProd(struct Prod estoque[], int *totalProd) {
         return;
    };
 }
+
+int main() {
+    system("cls");
+    struct Prod estoque[15];
+    int total = 0;
+    int opt;
+
+    while (1) {
+        printf("\n\t°=======Menu=========°");
+        printf("\n\t°1. Adicionar produto°");
+        printf("\n\t°2. Remover produto  °");
+        printf("\n\t°3. finalizar compra °");
+        printf("\n\t°====================°");
+        printf("\n\tEscolha uma opcao: ");
+        scanf("%d", &opt);
+
+    switch (opt) {
+
+     case 1:
+        adicionarProd(estoque, &total);
+        break;
+
+     case 2:
+        removerProd(estoque, &total);
+        break;
+     case 3:
+        printf("Pagando...\n");
+        exit(0);
+
+    default:
+        printf("Opção invalida! Tente novamente.\n");
+     system("cls");
+     }
+   }
+  return 0;
+}
